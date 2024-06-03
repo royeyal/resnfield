@@ -6,7 +6,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
 		const anim = gsap.fromTo(
 			box,
 			{ autoAlpha: 0, y: 50 },
-			{ duration: 1, autoAlpha: 1, y: 0, delay: 0.5 + 0.5 * i }
+			{
+				duration: 1,
+				autoAlpha: 1,
+				y: 0,
+				delay: 0.15 + 0.15 * i,
+			}
 		);
 
 		ScrollTrigger.create({
@@ -14,6 +19,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 			animation: anim,
 			toggleActions: "play none none none",
 			once: true,
+			ease: "power4.out",
 		});
 	});
 });
